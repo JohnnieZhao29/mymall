@@ -1,0 +1,52 @@
+#spring:
+#  datasource:
+#    username: root
+#    password: root
+#    url: jdbc:mysql://192.168.56.10:3306/mymall_sms
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#  cloud:
+#    nacos:
+#      config:
+#        server-addr: 127.0.0.1:8848
+#  application:
+#    name: mymall-coupon
+#mybatis-plus:
+#  mapper-locations: classpath:/mapper/**/*.xml
+#  global-config:
+#    db-config:
+#      id-type: auto
+#server:
+#  port: 7000
+
+#
+#spring:
+#  main:
+#    allow-bean-definition-overriding: true
+#  application:
+#    name: mymall-coupon
+#  cloud:
+#    nacos:
+#      config:
+#        server-addr: 127.0.0.1:8848
+#        namespace: daa8dc31-85bf-4883-af5d-e151d84a4728
+#        group: dev
+#        extension-configs[0]:
+#          data-id: datasource.yaml
+#          group: dev
+#          refresh: true
+#        extension-configs[1]:
+#          data-id: mybatis.yaml
+#          group: dev
+#          refresh: true
+#        extension-configs[2]:
+#          data-id: other.yaml
+#          group: dev
+#          refresh: true
+
+
+
+#spring.cloud.nacos.config.extension-configs[2].file-extension=yaml
+# spring.cloud.nacos.config.namespace=
+# 可以设置不同的命名空间，每个命名空间相互隔离，可以拥有名字相同的配置文件，用于不同环境下的配置。
+# spring.cloud.nacos.config.group=
+# 设置配置组，一个命名空间下不同组。
